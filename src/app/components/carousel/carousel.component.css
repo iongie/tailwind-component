@@ -1,0 +1,16 @@
+/* carousel.component.css */
+.carousel {
+    width: 100%;
+    height: 100%; /* Sesuaikan dengan tinggi yang diinginkan */
+    padding: 0 2rem; /* Menambahkan padding untuk membuat gambar berikut dan sebelumnya terlihat */
+    box-sizing: border-box;
+  }
+  
+  .carousel-item {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-indicators button {
+    transition: background-color 0.3s;
+  }
+  

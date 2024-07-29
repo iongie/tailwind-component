@@ -1,1 +1,15 @@
-<p>carousel works!</p>
+<!-- carousel.component.html -->
+<div class="carousel overflow-hidden relative my-4">
+    <div class="flex transition-transform duration-100" [style.transform]="getTransform()">
+        <div class="carousel-item flex-shrink-0 w-full h-full" *ngFor="let slide of slides; let i = index">
+            <img [src]="slide" alt="Slide {{ i + 1 }}" class="w-full h-48 lg:h-96 object-cover rounded-xl p-2">
+        </div>
+    </div>
+    <div class="carousel-indicators absolute bottom-4 left-0 right-0 flex justify-center p-2">
+        <button *ngFor="let slide of slides; let i = index"
+            class="w-3 h-3 bg-white rounded-full mx-1 focus:outline-none"
+            [ngClass]="{'bg-gray-800': i === currentSlide}" (click)="goToSlide(i)">
+        </button>
+    </div>
+</div>
+
